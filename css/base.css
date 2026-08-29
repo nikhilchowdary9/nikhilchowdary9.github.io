@@ -76,7 +76,7 @@ nav a.nav-link:hover{color:var(--amber);border-color:var(--amber);}
 nav a.nav-link.active{color:var(--amber);border-color:var(--amber);}
 
 /* ---- footer ---- */
-footer{flex:0 0 auto;text-align:center;padding:20px var(--side) 22px;font-family:'JetBrains Mono',monospace;font-size:10px;color:var(--muted);border-top:1px solid var(--line);margin-top:auto;}
+footer{flex:0 0 auto;text-align:center;padding:20px var(--side) 22px;font-family:'JetBrains Mono',monospace;font-size:10px;color:var(--muted);margin-top:auto;}
 
 /* ---- shared containers ---- */
 .container{max-width:var(--maxw);margin:0 auto;padding:0 var(--side);}
