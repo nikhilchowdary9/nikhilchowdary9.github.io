@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Projects — Nikhil Chowdary Tokala</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=JetBrains+Mono:wght@400;500;700&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/base.css">
+<link rel="stylesheet" href="css/projects.css">
+</head>
+<body data-page="projects">
+
+<div class="page">
+
+  <div data-include="partials/nav.html"></div>
+
+  <main>
+    <div class="container proj-hero">
+      <span class="eyebrow accent">TECHNICAL LABS</span>
+      <h1 class="display">Projects</h1>
+      <p class="lead" style="max-width:640px;">A mix of client-facing builds and things I've built for myself on weekends, mostly to keep the fundamentals sharp.</p>
+    </div>
+
+    <div class="container proj-section">
+      <span class="kicker">PROFESSIONAL LABS</span>
+      <div class="card-grid">
+
+        <div class="card">
+          <span class="card-kicker">AGENTIC AI · MULTIMODAL</span>
+          <div class="card-title">Agentic Script-to-Visual Generation Pipeline</div>
+          <p>An end-to-end workflow that takes a raw script and turns it into a structured screenplay, a shot-by-shot prompt breakdown, and a rendered visual storyboard. I orchestrated LLM agents to handle the text decomposition stage, then wired that output into open-source diffusion models running locally — which meant getting hands-on with VRAM budgeting and model quantization to keep render times reasonable on consumer hardware.</p>
+          <div class="chip-row">
+            <span class="chip">Python</span><span class="chip">PyTorch</span><span class="chip">Diffusers</span><span class="chip">Gemini API</span>
+          </div>
+        </div>
+
+        <div class="card">
+          <span class="card-kicker">SPEECH · METRIC LEARNING</span>
+          <div class="card-title">Voice Recognition &amp; Speaker Identification</div>
+          <p>A one-shot learning system for speaker identification, built around a 15-layer CNN trained on VoxCeleb audio spectrograms. I used Siamese networks with a triplet-loss objective and cosine distance so the model could recognize speakers it had never encountered during training — and it held up, reaching an AUC of 0.94 on unseen speakers.</p>
+          <div class="chip-row">
+            <span class="chip">PyTorch</span><span class="chip">CNNs</span><span class="chip">Siamese Networks</span><span class="chip">Triplet Loss</span>
+          </div>
+        </div>
+
+        <div class="card">
+          <span class="card-kicker">MOBILE · AI-ASSISTED DEV</span>
+          <div class="card-title">Rapid Mobile Application Prototyping</div>
+          <p>Two Android apps built and published end to end — one modeling poker strategy, one for personal interest tracking — using LLM-assisted code generation to compress the usual prototyping timeline. The interesting part wasn't the apps themselves so much as figuring out where AI-assisted development genuinely speeds things up versus where it just moves the debugging somewhere else.</p>
+          <div class="chip-row">
+            <span class="chip">Android</span><span class="chip">Kotlin</span><span class="chip">AI-Assisted Development</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="container proj-section">
+      <span class="kicker">PERSONAL BUILDS</span>
+      <div class="card-grid">
+
+        <div class="card">
+          <span class="card-kicker">IN PROGRESS · SPORTS ANALYTICS</span>
+          <div class="card-title">IPL Cricket Analytics Pipeline</div>
+          <p>A self-directed project built in Google Colab on ball-by-ball data from Cricsheet — partly because I follow the league closely, and partly as an excuse to build a real analytics pipeline from raw data all the way through to insight without a client deadline attached. The current stage is data engineering and exploratory analysis; the plan from here is to layer AI agent modules on top so match and player questions can be asked in natural language instead of written as queries.</p>
+          <div class="chip-row">
+            <span class="chip">Google Colab</span><span class="chip">Cricsheet Data</span><span class="chip">Agentic AI (planned)</span>
+          </div>
+        </div>
+
+        <div class="card">
+          <span class="card-kicker">FROM SCRATCH · NLP FUNDAMENTALS</span>
+          <div class="card-title">Word2Vec, Rebuilt From Scratch</div>
+          <p>A from-scratch PyTorch implementation of Word2Vec, trained on an RTX 5060 Ti — less about needing another embedding model and more about forcing myself to fully understand what off-the-shelf implementations abstract away. The main engineering problem turned out to be data throughput rather than model design: I hit memory and performance bottlenecks partway through training and resolved them by moving to a streaming IterableDataset approach instead of loading everything into memory up front.</p>
+          <div class="chip-row">
+            <span class="chip">PyTorch</span><span class="chip">GPU Training</span><span class="chip">Streaming Data Pipelines</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </main>
+
+  <div data-include="partials/footer.html"></div>
+
+</div>
+
+<script src="js/include.js"></script>
+</body>
+</html>

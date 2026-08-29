@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Experience — Nikhil Chowdary Tokala</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=JetBrains+Mono:wght@400;500;700&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/base.css">
+<link rel="stylesheet" href="css/experience.css">
+</head>
+<body data-page="experience">
+
+<div class="page">
+
+  <div data-include="partials/nav.html"></div>
+
+  <main>
+    <div class="container exp-hero">
+      <span class="eyebrow accent">FLIGHT LOG</span>
+      <h1 class="display">Experience</h1>
+      <p class="lead" style="max-width:640px;">Ten-plus years, four stops, one throughline: systems that make decisions at scale, and making sure they make the right ones.</p>
+    </div>
+
+    <div class="container">
+      <div class="exp-timeline">
+
+        <!-- Tiger Analytics -->
+        <div class="exp-item current">
+          <div class="exp-marker-col"><div class="marker-dot"></div></div>
+          <div class="exp-body">
+            <span class="tl-tag">CURRENT</span>
+            <div class="exp-title-row">
+              <span class="tl-co">Tiger Analytics</span>
+              <span class="location">Plano, Texas</span>
+            </div>
+            <div class="tl-role">Manager, Data Science</div>
+            <span class="tl-yr">October 2022 – Present</span>
+
+            <p class="tl-body">I joined Tiger Analytics as the fraud and risk decisioning practice was scaling up to serve larger enterprise clients, and I've spent most of my time since leading the technical side of that growth. The centerpiece has been a multi-model fraud detection architecture for a Tier-1 US credit bureau — a system that has to reason about first-party fraud, third-party fraud, and synthetic identities all at once, and fold behavioral biometric signals into real-time decisions without slowing the pipeline down.</p>
+            <p class="tl-body">Underneath that sits distributed ML infrastructure I designed in PySpark to process multi-terabyte interaction datasets and run counterfactual inference on cohorts the model has never seen — the difference between a model that looks good on paper and one that holds up when the population shifts. More recently I've been building an agentic AI layer on AWS Bedrock with function calling and RAG, so that non-technical stakeholders can ask questions of high-dimensional datasets in plain language instead of waiting on a query. Along the way I've been technical lead and code owner for a team of 6–8 onshore/offshore data scientists and engineers, and led a Spark/SQL performance push on AWS EMR that cut processing time by 80% and compute spend by 60%.</p>
+            <div class="chip-row">
+              <span class="chip">PySpark</span><span class="chip">AWS Bedrock</span><span class="chip">Agentic AI / RAG</span><span class="chip">Fraud &amp; Risk Decisioning</span><span class="chip">Team Leadership</span><span class="chip">AWS EMR</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Sigmoid Analytics -->
+        <div class="exp-item">
+          <div class="exp-marker-col"><div class="marker-dot"></div></div>
+          <div class="exp-body">
+            <div class="exp-title-row">
+              <span class="tl-co">Sigmoid Analytics</span>
+              <span class="location">Bengaluru &amp; Amsterdam</span>
+            </div>
+            <div class="tl-role">Associate Lead Data Scientist</div>
+            <span class="tl-yr">July 2018 – August 2022</span>
+
+            <p class="tl-body">This is where my focus shifted from "what will happen" to "what actually caused it." I led ad-tech analytics and causal inference for a Fortune 500 consumer goods company's marketing attribution system, rebuilding how sales contribution was decomposed and presenting the findings across several of their global brands — the kind of work where the client's marketing spend for the next quarter depends on your model being right, not just plausible.</p>
+            <p class="tl-body">Alongside that I built an audience segmentation algorithm using Leiden clustering that lifted campaign engagement by 40%, an identity graph system that cut data wastage by roughly 10% for a consumer-intent ad-tech platform, and an XGBoost/elastic-net ensemble for a Latin American beauty and cosmetics company that improved demand forecasting accuracy enough to reduce annual operating cost by $3M. The move between Bengaluru and Amsterdam mid-role also meant learning to hand off and pick up client relationships across time zones — a skill that turned out to matter as much as the modeling.</p>
+            <div class="chip-row">
+              <span class="chip">Causal Inference</span><span class="chip">Marketing Attribution</span><span class="chip">XGBoost</span><span class="chip">Demand Forecasting</span><span class="chip">Audience Segmentation</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Cyient Insights -->
+        <div class="exp-item">
+          <div class="exp-marker-col"><div class="marker-dot"></div></div>
+          <div class="exp-body">
+            <div class="exp-title-row">
+              <span class="tl-co">Cyient Insights</span>
+              <span class="location">Hyderabad</span>
+            </div>
+            <div class="tl-role">Data Scientist</div>
+            <span class="tl-yr">July 2016 – July 2018</span>
+
+            <p class="tl-body">My first job out of college, and in hindsight the most direct bridge from aerospace engineering into data science. For a mining-equipment manufacturer, I built a sensor-analytics solution that could detect a lost excavator tooth in the field within 60 seconds — a small-sounding problem that, left undetected, meant expensive downtime and safety risk. For an aerospace engine manufacturer, I built predictive maintenance models using usage parameters and operator history that hit an R² of 0.87, letting the OEM offer customized maintenance plans instead of fixed schedules.</p>
+            <p class="tl-body">I also applied neural networks to satellite imagery for a global navigation and mapping company, and built Power BI dashboards for a rail OEM to help engineers correlate live warning signals by priority. Different industries, same pattern: physical systems generating signal, and the job was making that signal legible before something broke.</p>
+            <div class="chip-row">
+              <span class="chip">Sensor Analytics</span><span class="chip">Predictive Maintenance</span><span class="chip">Neural Networks</span><span class="chip">Power BI</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Formative internships -->
+        <div class="exp-item">
+          <div class="exp-marker-col"><div class="marker-dot"></div></div>
+          <div class="exp-body">
+            <div class="exp-title-row">
+              <span class="tl-co">ISRO &amp; Airports Authority of India</span>
+              <span class="location">Bengaluru</span>
+            </div>
+            <div class="tl-role">Internships, during B.Tech</div>
+            <span class="tl-yr">2014 – 2015</span>
+
+            <p class="tl-body">Two internships that shaped how I think about systems long before I called myself a data scientist. At ISRO, I worked on inverse-GPS-style architecture to improve satellite tracking accuracy. At the Airports Authority of India, I built a MATLAB interface for GAGAN, India's satellite-based augmentation system, improving navigation reliability through image processing. Both were early lessons in working on systems where the margin for error is measured in meters, not percentage points.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </main>
+
+  <div data-include="partials/footer.html"></div>
+
+</div>
+
+<script src="js/include.js"></script>
+</body>
+</html>
