@@ -100,6 +100,17 @@ p.lead{color:var(--muted);font-size:clamp(14px,1.6vw,16.5px);line-height:1.75;}
 .badge .ring{position:absolute;inset:0;border-radius:50%;border:2.5px solid var(--amber);box-shadow:0 0 0 5px rgba(232,184,75,0.08), 0 0 0 6px var(--line);}
 .badge .photo-slot{position:absolute;inset:8px;border-radius:50%;background:var(--panel);display:flex;align-items:center;justify-content:center;color:var(--muted);font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:0.05em;text-align:center;line-height:1.4;border:1px solid var(--line);overflow:hidden;}
 
+/* ---- reusable corner-bracket accent (used on photo frames and content panels) ---- */
+.bracket-frame{position:relative;}
+.bracket-frame::before{
+  content:'';position:absolute;top:14px;left:14px;width:16px;height:16px;
+  border-top:1px solid var(--amber);border-left:1px solid var(--amber);
+}
+.bracket-frame::after{
+  content:'';position:absolute;bottom:14px;right:14px;width:16px;height:16px;
+  border-bottom:1px solid var(--teal);border-right:1px solid var(--teal);
+}
+
 /* ---- rectangular photo-frame component (about page, reusable elsewhere) ---- */
 .photo-frame{
   position:relative;
@@ -107,14 +118,6 @@ p.lead{color:var(--muted);font-size:clamp(14px,1.6vw,16.5px);line-height:1.75;}
   background:var(--panel);
   border-radius:4px;
   overflow:hidden;
-}
-.photo-frame::before{
-  content:'';position:absolute;top:14px;left:14px;width:16px;height:16px;
-  border-top:1px solid var(--amber);border-left:1px solid var(--amber);
-}
-.photo-frame::after{
-  content:'';position:absolute;bottom:14px;right:14px;width:16px;height:16px;
-  border-bottom:1px solid var(--teal);border-right:1px solid var(--teal);
 }
 .photo-frame .photo-slot{
   position:absolute;inset:0;display:flex;align-items:center;justify-content:center;
