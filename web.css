@@ -1,0 +1,46 @@
+body {
+  font-family: -apple-system, "Segoe UI", Helvetica, Arial, sans-serif;
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 0 20px;
+  line-height: 1.6;
+  color: #222;
+}
+
+header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+h1 {
+  margin-bottom: 5px;
+}
+
+.contact {
+  color: #555;
+  font-size: 0.95em;
+}
+
+h2 {
+  border-bottom: 2px solid #333;
+  padding-bottom: 4px;
+  margin-top: 40px;
+}
+
+.entry {
+  margin-bottom: 20px;
+}
+
+.entry-title {
+  font-weight: bold;
+}
+
+.entry-sub {
+  color: #555;
+  font-style: italic;
+  margin-bottom: 5px;
+}
+
+ul {
+  margin-top: 5px;
+}
