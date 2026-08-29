@@ -63,6 +63,7 @@ nav{
   display:flex;align-items:center;justify-content:space-between;
   padding:14px var(--side);border-bottom:1px solid var(--line);
   flex:0 0 auto;
+  position:relative;z-index:50;
 }
 .brand{font-family:'JetBrains Mono',monospace;font-size:13px;letter-spacing:0.12em;color:var(--muted);text-decoration:none;}
 .brand b{color:var(--amber);font-weight:500;}
@@ -74,6 +75,16 @@ nav a.nav-link{
 }
 nav a.nav-link:hover{color:var(--amber);border-color:var(--amber);}
 nav a.nav-link.active{color:var(--amber);border-color:var(--amber);}
+
+/* mobile: stack brand above links, shrink links to fit one row instead of
+   overflowing off-screen (this must live here, not in a page-specific file,
+   since nav is shared across every page) */
+@media (max-width:760px){
+  nav{flex-direction:column;align-items:center;gap:10px;padding:12px 6vw;}
+  .brand{font-size:11px;}
+  .nav-links{flex-wrap:nowrap;justify-content:center;width:100%;gap:clamp(3px,1.4vw,7px);}
+  nav a.nav-link{font-size:clamp(7.5px,2.5vw,10px);padding:5px 6px;letter-spacing:0.05em;}
+}
 
 /* ---- footer ---- */
 footer{flex:0 0 auto;text-align:center;padding:20px var(--side) 22px;font-family:'JetBrains Mono',monospace;font-size:10px;color:var(--muted);margin-top:auto;}
@@ -99,6 +110,9 @@ p.lead{color:var(--muted);font-size:clamp(14px,1.6vw,16.5px);line-height:1.75;}
 .badge{position:relative;width:clamp(96px,13vh,150px);height:clamp(96px,13vh,150px);margin:0 auto;}
 .badge .ring{position:absolute;inset:0;border-radius:50%;border:2.5px solid var(--amber);box-shadow:0 0 0 5px rgba(232,184,75,0.08), 0 0 0 6px var(--line);}
 .badge .photo-slot{position:absolute;inset:8px;border-radius:50%;background:var(--panel);display:flex;align-items:center;justify-content:center;color:var(--muted);font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:0.05em;text-align:center;line-height:1.4;border:1px solid var(--line);overflow:hidden;}
+
+/* shared: fills either the circular badge or the rectangular photo-frame */
+.photo-slot img{width:100%;height:100%;object-fit:cover;display:block;}
 
 /* ---- reusable corner-bracket accent (used on photo frames and content panels) ---- */
 .bracket-frame{position:relative;}

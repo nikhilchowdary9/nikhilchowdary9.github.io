@@ -16,8 +16,6 @@
 .about-photo{
   aspect-ratio:3/4;
   width:100%;
-  position:sticky;
-  top:clamp(20px,4vh,50px);
 }
 .about-photo .photo-slot{font-size:13px;}
 
@@ -39,7 +37,13 @@
 .about-bridge a{color:var(--teal);text-decoration:none;border-bottom:1px dotted var(--teal);}
 .about-bridge a:hover{color:var(--amber);border-color:var(--amber);}
 
+/* sticky photo only kicks in once there's a real two-column layout (desktop) —
+   default is static so mobile never risks a sticky element overlapping the nav */
+@media (min-width:821px){
+  .about-photo{position:sticky;top:clamp(20px,4vh,50px);}
+}
+
 @media (max-width:820px){
   .about-grid{grid-template-columns:1fr;}
-  .about-photo{position:static;max-width:340px;margin:0 auto;aspect-ratio:4/5;}
+  .about-photo{max-width:340px;margin:0 auto;aspect-ratio:4/5;}
 }
